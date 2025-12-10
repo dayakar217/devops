@@ -1,0 +1,27 @@
+---
+- name: Uninstall Nginx
+  hosts: localhost
+  become: yes
+
+  tasks:
+    - name: service stop
+      service:
+        name: nginx
+        state: stopped
+    
+    
+    - name: Uninstall nginx
+      apt:
+        name: nginx
+        state: absent
+
+    - name: service stop of haproxy
+      service: 
+         name: haproxy
+         state: stopped
+    - name: uninstall haproxy
+      apt: 
+        name: haproxy
+        state: absent
+
+      

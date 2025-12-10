@@ -1,0 +1,27 @@
+---
+- name: Install and Run Nginx, HaProxy
+  hosts: localhost
+  become: yes
+
+  tasks:
+    - name: Install nginx
+      apt:
+        name: nginx
+        state: present
+    - name: start nginx
+      service:
+        name: nginx
+        state: started
+        enabled: yes
+    
+    - name: Install HaProxy
+      apt:
+        name: haproxy
+        state: present
+       
+    - name: Run HaProxy
+      service:
+        name: haproxy
+        state: started
+        enabled: yes
+  

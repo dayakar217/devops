@@ -1,0 +1,25 @@
+ansible -i inventory all -m "shell" -a "df -h"
+ansible  -i inventory all -m "shell" -a "free -h"
+
+
+ansible  -i inventory all -m "apt" -a "name=nginx state=present" --become
+ansible  -i inventory all -m "apt" -a "name=nginx state=absent" --become
+ansible  -i inventory all -m "apt" -a "update_cache=yes" --become
+
+
+
+ansible  -i inventory all -m copy -a "src=/tmp/test dest=/tmp/test"
+
+
+ansible -i inventory all -m file -a "path=/tmp/newdir state=directory"
+ansible -i inventory all -m file -a "path=/tmp/test state=absent"
+
+
+ansible -i inventory all -m service -a "name=nginx state=started" --become
+
+
+ansible -i inventory all -m user -a "name=john state=present" --become
+
+ansible -i inventory all -m script -a "/path/to/local_script.sh"
+
+
