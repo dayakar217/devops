@@ -1,0 +1,13 @@
+192.168.10.1 - - [29/Dec/2025:10:01:01 +0530] "GET /bad-request HTTP/1.1" 400 166 "-" "Mozilla/5.0"
+192.168.10.2 - - [29/Dec/2025:10:01:05 +0530] "POST /login HTTP/1.1" 401 188 "-" "curl/7.88.1"
+192.168.10.3 - - [29/Dec/2025:10:01:10 +0530] "GET /restricted HTTP/1.1" 403 162 "-" "Mozilla/5.0"
+192.168.10.4 - - [29/Dec/2025:10:01:15 +0530] "GET /missing.html HTTP/1.1" 404 153 "-" "Mozilla/5.0"
+192.168.10.5 - - [29/Dec/2025:10:01:20 +0530] "PUT /method-not-allowed HTTP/1.1" 405 178 "-" "PostmanRuntime/7.36"
+192.168.10.6 - - [29/Dec/2025:10:01:25 +0530] "POST /upload HTTP/1.1" 413 199 "-" "Mozilla/5.0"
+192.168.10.7 - - [29/Dec/2025:10:01:30 +0530] "GET /unsupported HTTP/1.1" 415 173 "-" "Mozilla/5.0"
+192.168.10.8 - - [29/Dec/2025:10:01:35 +0530] "GET /rate-limit HTTP/1.1" 429 121 "-" "Mozilla/5.0"
+
+192.168.10.9 - - [29/Dec/2025:10:02:01 +0530] "GET /server-error HTTP/1.1" 500 245 "-" "Mozilla/5.0"
+192.168.10.10 - - [29/Dec/2025:10:02:05 +0530] "GET /bad-gateway HTTP/1.1" 502 212 "-" "Mozilla/5.0"
+192.168.10.11 - - [29/Dec/2025:10:02:10 +0530] "GET /service-down HTTP/1.1" 503 199 "-" "Mozilla/5.0"
+192.168.10.12 - - [29/Dec/2025:10:02:15 +0530] "GET /timeout HTTP/1.1" 504 221 "-" "Mozilla/5.0"
